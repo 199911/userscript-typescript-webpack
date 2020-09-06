@@ -3,10 +3,13 @@
     "@types/node": "^10.12.18",
     "@types/terser-webpack-plugin": "^1.2.1",
     "@types/webpack": "^4.4.23",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "eslint": "^7.8.1",
     "ts-loader": "^5.3.3",
     "ts-node": "^7.0.1",
     "tsconfig-paths": "^3.8.0",
-    "typescript": "^3.4.0",
+    "typescript": "^4.0.2",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1"
   },
@@ -15,6 +18,7 @@
     "build-dev": "yarn build --mode development",
     "deploy": "yarn build && yarn content-to-clipboard",
     "dev": "yarn build-dev && yarn content-to-clipboard",
-    "content-to-clipboard": "pbcopy < dist/script.user.js"
+    "content-to-clipboard": "pbcopy < dist/script.user.js",
+    "lint": "yarn eslint ./src --ext .ts --fix"
   }
 }
